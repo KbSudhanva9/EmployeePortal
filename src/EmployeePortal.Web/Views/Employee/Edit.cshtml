@@ -1,0 +1,200 @@
+@model EmployeePortal.Application.DTOs.UpdateEmployeeDto
+
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+
+<div class="container-fluid py-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="h3 text-gray-800">Edit Employee</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form method="post" class="needs-validation" novalidate>
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="Id" value="@Model?.Id" />
+
+                        <!-- Employee Number -->
+                        <div class="mb-3">
+                            <label for="EmployeeNumber" class="form-label">Employee Number <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @(ModelState.IsValid ? "" : "is-invalid")" 
+                                   id="EmployeeNumber" name="EmployeeNumber" 
+                                   value="@Model?.EmployeeNumber" required>
+                            @if (!ModelState.IsValid && ModelState["EmployeeNumber"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["EmployeeNumber"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- First Name -->
+                        <div class="mb-3">
+                            <label for="FirstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @(ModelState.IsValid ? "" : "is-invalid")" 
+                                   id="FirstName" name="FirstName" 
+                                   value="@Model?.FirstName" required>
+                            @if (!ModelState.IsValid && ModelState["FirstName"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["FirstName"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="mb-3">
+                            <label for="LastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @(ModelState.IsValid ? "" : "is-invalid")" 
+                                   id="LastName" name="LastName" 
+                                   value="@Model?.LastName" required>
+                            @if (!ModelState.IsValid && ModelState["LastName"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["LastName"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Department -->
+                        <div class="mb-3">
+                            <label for="Department" class="form-label">Department <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @(ModelState.IsValid ? "" : "is-invalid")" 
+                                   id="Department" name="Department" 
+                                   value="@Model?.Department" required>
+                            @if (!ModelState.IsValid && ModelState["Department"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["Department"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Designation -->
+                        <div class="mb-3">
+                            <label for="Designation" class="form-label">Designation <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @(ModelState.IsValid ? "" : "is-invalid")" 
+                                   id="Designation" name="Designation" 
+                                   value="@Model?.Designation" required>
+                            @if (!ModelState.IsValid && ModelState["Designation"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["Designation"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control @(ModelState.IsValid ? "" : "is-invalid")" 
+                                   id="Email" name="Email" 
+                                   value="@Model?.Email" required>
+                            @if (!ModelState.IsValid && ModelState["Email"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["Email"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mb-3">
+                            <label for="Phone" class="form-label">Phone <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @(ModelState.IsValid ? "" : "is-invalid")" 
+                                   id="Phone" name="Phone" 
+                                   placeholder="10 digits" value="@Model?.Phone" required>
+                            @if (!ModelState.IsValid && ModelState["Phone"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["Phone"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Status -->
+                        <div class="mb-3">
+                            <label for="Status" class="form-label">Status <span class="text-danger">*</span></label>
+                            <select class="form-select @(ModelState.IsValid ? "" : "is-invalid")" 
+                                    id="Status" name="Status" required>
+                                <option value="">Select Status</option>
+                                <option value="Active" selected="@(Model?.Status == "Active")">Active</option>
+                                <option value="Inactive" selected="@(Model?.Status == "Inactive")">Inactive</option>
+                            </select>
+                            @if (!ModelState.IsValid && ModelState["Status"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["Status"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Date of Joining -->
+                        <div class="mb-3">
+                            <label for="DateOfJoining" class="form-label">Date of Joining <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control @(ModelState.IsValid ? "" : "is-invalid")" 
+                                   id="DateOfJoining" name="DateOfJoining" 
+                                   value="@Model?.DateOfJoining.ToString("yyyy-MM-dd")" required>
+                            @if (!ModelState.IsValid && ModelState["DateOfJoining"]?.Errors.Count > 0)
+                            {
+                                <div class="invalid-feedback d-block">
+                                    @ModelState["DateOfJoining"]?.Errors.First().ErrorMessage
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Update Employee
+                            </button>
+                            <a href="@Url.Action("Index")" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Help Section -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-light border-bottom">
+                    <h5 class="mb-0">Employee Info</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row small mb-0">
+                        <dt class="col-sm-6">ID:</dt>
+                        <dd class="col-sm-6">@Model?.Id</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.querySelectorAll('.needs-validation');
+                Array.prototype.slice.call(forms).forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        }());
+    </script>
+}
