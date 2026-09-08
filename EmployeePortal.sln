@@ -1,0 +1,60 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F1E1E1E1-E1E1-E1E1-E1E1-E1E1E1E1E1E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F2E2E2E2-E2E2-E2E2-E2E2-E2E2E2E2E2E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{F3E3E3E3-E3E3-E3E3-E3E3-E3E3E3E3E3E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{F4E4E4E4-E4E4-E4E4-E4E4-E4E4E4E4E4E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F5E5E5E5-E5E5-E5E5-E5E5-E5E5E5E5E5E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{F6E6E6E6-E6E6-E6E6-E6E6-E6E6E6E6E6E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7D60}") = "EmployeePortal.Web", "src\EmployeePortal.Web\EmployeePortal.Web.csproj", "{F7E7E7E7-E7E7-E7E7-E7E7-E7E7E7E7E7E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7D60}") = "EmployeePortal.Application", "src\EmployeePortal.Application\EmployeePortal.Application.csproj", "{F8E8E8E8-E8E8-E8E8-E8E8-E8E8E8E8E8E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7D60}") = "EmployeePortal.Domain", "src\EmployeePortal.Domain\EmployeePortal.Domain.csproj", "{F9E9E9E9-E9E9-E9E9-E9E9-E9E9E9E9E9E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7D60}") = "EmployeePortal.Infrastructure", "src\EmployeePortal.Infrastructure\EmployeePortal.Infrastructure.csproj", "{FAEAEAEA-EAEA-EAEA-EAEA-EAEAEAEAEAEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7D60}") = "EmployeePortal.Persistence", "src\EmployeePortal.Persistence\EmployeePortal.Persistence.csproj", "{FBFBFBFB-FBFB-FBFB-FBFB-FBFBFBFBFBFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7D60}") = "EmployeePortal.Tests", "tests\EmployeePortal.Tests\EmployeePortal.Tests.csproj", "{FCFCFCFC-FCFC-FCFC-FCFC-FCFCFCFCFCFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7E7E7E7-E7E7-E7E7-E7E7-E7E7E7E7E7E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E7E7E7-E7E7-E7E7-E7E7-E7E7E7E7E7E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E7E7E7-E7E7-E7E7-E7E7-E7E7E7E7E7E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E7E7E7-E7E7-E7E7-E7E7-E7E7E7E7E7E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8E8E8E8-E8E8-E8E8-E8E8-E8E8E8E8E8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8E8E8E8-E8E8-E8E8-E8E8-E8E8E8E8E8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8E8E8E8-E8E8-E8E8-E8E8-E8E8E8E8E8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8E8E8E8-E8E8-E8E8-E8E8-E8E8E8E8E8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E9E9E9-E9E9-E9E9-E9E9-E9E9E9E9E9E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E9E9E9-E9E9-E9E9-E9E9-E9E9E9E9E9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E9E9E9-E9E9-E9E9-E9E9-E9E9E9E9E9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E9E9E9-E9E9-E9E9-E9E9-E9E9E9E9E9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAEAEAEA-EAEA-EAEA-EAEA-EAEAEAEAEAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAEAEAEA-EAEA-EAEA-EAEA-EAEAEAEAEAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAEAEAEA-EAEA-EAEA-EAEA-EAEAEAEAEAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAEAEAEA-EAEA-EAEA-EAEA-EAEAEAEAEAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBFBFBFB-FBFB-FBFB-FBFB-FBFBFBFBFBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFBFBFB-FBFB-FBFB-FBFB-FBFBFBFBFBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFBFBFB-FBFB-FBFB-FBFB-FBFBFBFBFBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFBFBFB-FBFB-FBFB-FBFB-FBFBFBFBFBFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFCFCFC-FCFC-FCFC-FCFC-FCFCFCFCFCFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFCFCFC-FCFC-FCFC-FCFC-FCFCFCFCFCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFCFCFC-FCFC-FCFC-FCFC-FCFCFCFCFCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFCFCFC-FCFC-FCFC-FCFC-FCFCFCFCFCFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
