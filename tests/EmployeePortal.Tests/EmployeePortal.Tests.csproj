@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.6.6" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.2" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\EmployeePortal.Web\EmployeePortal.Web.csproj" />
+    <ProjectReference Include="..\..\src\EmployeePortal.Application\EmployeePortal.Application.csproj" />
+    <ProjectReference Include="..\..\src\EmployeePortal.Domain\EmployeePortal.Domain.csproj" />
+    <ProjectReference Include="..\..\src\EmployeePortal.Infrastructure\EmployeePortal.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\EmployeePortal.Persistence\EmployeePortal.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
